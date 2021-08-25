@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myproject.blog.biz.mapper.TagMapper">
+    <select id="findTagsByArticleId" resultType="com.myproject.blog.biz.entity.SysTag">
+        select
+            *
+        from
+            tb_tag t,
+            tb_article a,
+            tb_article_tag ta
+        where
+            t.id=ta.tag_id
+            and a.id=ta.article_id
+            and a.id=#{id}
+    </select>
+</mapper>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myproject.blog.biz.mapper.ArticleMapper">
+    <select id="findByTag" resultType="com.myproject.blog.biz.entity.SysArticle">
+        SELECT
+            a.id, a.title, a.author, a.create_time
+        FROM
+            tb_article a,
+            tb_tag t,
+            tb_article_tag art
+        WHERE
+            t.id=#{id}
+        AND t.id=art.tag_id
+        AND a.id=art.article_id
+        AND a.author=#{userName}
+    </select>
+
+    <select id="findByCategory" resultType="com.myproject.blog.biz.entity.SysArticle">
+        SELECT
+            a.id, a.title, a.author, a.create_time
+        FROM
+            tb_article a,
+            tb_category c,
+            tb_article_category ac
+        WHERE
+            c.id=#{id}
+        AND c.id=ac.category_id
+        AND a.id=ac.article_id
+        AND a.author=#{userName}
+    </select>
+</mapper>
