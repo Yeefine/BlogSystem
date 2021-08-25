@@ -25,6 +25,12 @@ Solitude是基于SpringBoot2.x框架，借助Vue.js、Thymeleaf构建的一个�
 
 ### 效果展示
 
++ 登录页面
+
+  ![](https://raw.githubusercontent.com/Yeefine/picBed/master/20210825113301.png)
+
+  ---
+
 + 首页展示
 
   ![](https://raw.githubusercontent.com/Yeefine/picBed/master/20210825113250.png)
@@ -32,10 +38,6 @@ Solitude是基于SpringBoot2.x框架，借助Vue.js、Thymeleaf构建的一个�
 + 文章详细页面
 
   ![](https://raw.githubusercontent.com/Yeefine/picBed/master/20210825113223.png)
-
-+ 登录页面
-
-  ![](https://raw.githubusercontent.com/Yeefine/picBed/master/20210825113301.png)
 
 + 后台管理页面
 
